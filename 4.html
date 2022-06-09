@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>01</title>
+    <style></style>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      window.onload = function () {
+        var time = document.getElementById('time');
+
+        setInterval(function () {
+          var now = new Date();
+          var hours = now.getHours();
+          if (12 < hours) {
+            time.innerHTML = now.toString();
+            document.bgColor = 'orange';
+          } else {
+            time.innerHTML = now.toString();
+            document.bgColor = 'lightskyblue';
+          }
+        }, 1000);
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="time"></h1>
+  </body>
+</html>
